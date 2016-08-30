@@ -1,0 +1,28 @@
+# set logging to screen
+if ENV.include?('RAILS_ENV')
+  # Rails 2.x
+  if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+    require 'logger'
+    Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
+  end
+else
+  # Rails 3
+  if Rails.logger
+    Rails.logger = Logger.new(STDOUT)
+    ActiveRecord::Base.logger = Rails.logger
+  end
+end
+
+def sql(query)
+  ActiveRecord::Base.connection.select_all(query)
+end
+
+def account_name_like partial_name
+  Account.all(:conditions => ["name LIKE ?", "%#{partial_name}%"])
+end
+
+# makes postres the default rdbms
+-d postgresql
+
+# use rspec by default
+--skip-test-unit

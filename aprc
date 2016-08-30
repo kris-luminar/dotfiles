@@ -1,0 +1,4 @@
+# coming in Awesome Print v2, we will have support for Ruby 1.9 style hash syntax
+# AwesomePrint.defaults = {
+#   new_hash_syntax: false
+# }

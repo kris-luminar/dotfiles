@@ -1,0 +1,47 @@
+# General Ack Settings
+####################################################################
+
+# only search with case sensitivity if there is mixed case
+--smart-case
+
+# follow symlinks
+--follow
+
+# Always sort the files
+#--sort−files
+
+# Ack Type Settings
+####################################################################
+
+# add some more zope files to the plone type
+--type-add=python=.cpy,.vpy
+
+# add specific type for page templates
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+
+# plain text CSV files
+--type-set=csv=.txt,.csv,.tsv
+
+--type-add=css=.scss,.sass
+
+# Ruby
+--type-add=ruby=.rake,.rsel,.ru,.lock
+--type-set=rubytemplates=.slim,.erb,.haml
+--type-set=feature=.feature
+
+# files to ignore
+--ignore-file=is:tags
+--ignore-file=ext:pdf
+--ignore-file=ext:fdf
+
+# Don't search through generated .bundle dir
+--ignore-dir=.bundle
+
+--type-add=php=.inc
+
+#make sure ack knows how to search common filetypes used in node.js projects
+--ignore-dir=node_modules
+--type-set=coffee=.coffee
+--type-set=jade=.jade
+--type-set=json=.json
+
