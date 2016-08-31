@@ -25,9 +25,9 @@ Install:
 
     # install the dotfiles
     rcup -x README.md -x LICENSE
-    # setup vim vundle
-    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    vim +BundleInstall +qall
+    # setup vim pathogen
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 This creates the symlinks for all files stored in .dotfiles
 
