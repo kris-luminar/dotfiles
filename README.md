@@ -8,12 +8,13 @@ Install
 
 Clone down this repo
 
-    git clone git://github.com/krisluminar/dotfiles.git ~/.dotfiles
+    git clone git://github.com/kris-luminar/dotfiles.git ~/.dotfiles
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
     # Mac
-    brew bundle
+    brew tap thoughtbot/formulae
+    brew install rcm
 
     # CentOS (other linux distros, here: https://github.com/thoughtbot/rcm)
     cd /etc/yum.repos.d/
