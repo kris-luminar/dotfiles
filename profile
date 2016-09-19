@@ -5,11 +5,17 @@ PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/my
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# linuxbrew
+PATH="$HOME/.linuxbrew/bin:$PATH"
+PATH="$HOME/.linuxbrew/sbin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
 export PGDATA=/usr/local/var/postgres
 
 #export FSEVENT_SLEEP="/Users/krisluminar/Downloads/svoop-autotest-fsevent-b143d0a/prebuilt/10.7/fsevent_sleep"
-export EDITOR='/usr/local/bin/vim'
-export VISUAL='/usr/local/bin/vim'
+export EDITOR='/usr/bin/vim'
+export VISUAL='/usr/bin/vim'
 
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
