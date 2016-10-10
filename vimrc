@@ -7,7 +7,11 @@ let mapleader = ","
 
 " for vim compiled with the +clipboard all operations such as yy, D, and P work with the clipboard. No need to prefix them with \"* or \"+
 " also see http://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
-set clipboard=unnamed
+" set clipboard=unnamed
+
+
+" https://github.com/wincent/clipper
+nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
 
 " Open new split panes to right and bottom, which feels more natural than Vim’s default
 set splitbelow
@@ -137,7 +141,7 @@ let g:highlighting = 0
 
 "============================== favorite colorschemes =============================="
 " good light themes
-set background=light
+" set background=light
 " colorscheme lucius
 " colorscheme simple256
 " colorscheme summerfruit256
@@ -145,11 +149,11 @@ set background=light
 " colorscheme blackbeauty
 " colorscheme desert
 " colorscheme evening
-colorscheme peachpuff
+" colorscheme peachpuff
 
 " good dark themes
 " highlight Normal ctermfg=grey ctermbg=darkblue
-" set background=dark
+set background=dark
 " colorscheme jellybeans
 " colorscheme lettuce
 " colorscheme inkpot
@@ -159,7 +163,7 @@ colorscheme peachpuff
 " colorscheme nightvision
 " colorscheme darkZ
 " colorscheme buttercream
-" colorscheme distinguished
+colorscheme distinguished
 " colorscheme delek
 
 highlight ShowTrailingWhitespace ctermbg=Red guibg=Red
@@ -181,13 +185,18 @@ let g:rspec_runner = "os_x_iterm2"
 map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>R :call RunNearestSpec()<CR>
 
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/vim-xmark', { 'do': 'make' }
+" Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 " Add plugins to &runtimepath
-call plug#end()
+" call plug#end()
 
+" draw a line at column 80
+set textwidth=80
+let &colorcolumn=join(range(81,81),",")
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
+highlight ColorColumn ctermbg=233 guibg=#2c2d27
 
 " watches this vimrc file for changes and reloads them into vim automatically
 " copied from http://superuser.com/a/417997/224585
@@ -195,3 +204,7 @@ augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
