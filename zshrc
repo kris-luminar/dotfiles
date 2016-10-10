@@ -1,8 +1,15 @@
 source ~/.profile
 source ~/.secrets
 
+# now handled by vi-mode oh my zsh plugin
 # use vi/vim bindings in the shell
-bindkey -v
+# bindkey -v
+
+# now handled by vi-mode oh my zsh plugin
+#  By default, there is a 0.4 second delay after you hit the <ESC> key and when
+#  the mode change is registered. This results in a very jarring and frustrating
+#  transition between modes. Let's reduce this delay to 0.1 seconds.
+# export KEYTIMEOUT=1
 
 #Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
@@ -10,8 +17,9 @@ export CLICOLOR=1
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 
+# now handled by vi-mode oh my zsh plugin
 # bind Ctrl-R to search history in reverse, like the normalm emacs keybinding
-bindkey "^R" history-incremental-search-backward
+# bindkey "^R" history-incremental-search-backward
 
 HISTFILE=~/.zshistory
 HISTSIZE=10000
@@ -91,7 +99,7 @@ ZSH_THEME="avit"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git rails vi-mode bundler)
-plugins=()
+plugins=(vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

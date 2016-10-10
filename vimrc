@@ -195,7 +195,7 @@ map <Leader>R :call RunNearestSpec()<CR>
 " draw a line at column 80
 set textwidth=80
 let &colorcolumn=join(range(81,81),",")
-" highlight ColorColumn ctermbg=235 guibg=#2c2d27
+" " highlight ColorColumn ctermbg=235 guibg=#2c2d27
 highlight ColorColumn ctermbg=233 guibg=#2c2d27
 
 " watches this vimrc file for changes and reloads them into vim automatically
