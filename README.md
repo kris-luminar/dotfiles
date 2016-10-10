@@ -8,7 +8,7 @@ Install
 
 Clone down this repo
 
-    git clone git://github.com/kris-luminar/dotfiles.git ~/.dotfiles
+    git clone https://github.com/kris-luminar/dotfiles.git ~/.dotfiles
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
@@ -24,10 +24,10 @@ Install [rcm](https://github.com/thoughtbot/rcm):
 Install:
 
     # install the dotfiles
-    rcup -x README.md -x Brewfile
-    # setup vim vundle
-    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    vim +BundleInstall +qall
+    rcup -x README.md -x LICENSE
+    # setup vim pathogen
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 This creates the symlinks for all files stored in .dotfiles
 
