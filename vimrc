@@ -185,12 +185,22 @@ let g:rspec_runner = "os_x_iterm2"
 map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>R :call RunNearestSpec()<CR>
 
-" call plug#begin('~/.vim/plugged')
+"""" vim-plug
 
-" Plug 'junegunn/vim-xmark', { 'do': 'make' }
+" Install vim-plug if not installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-" Add plugins to &runtimepath
-" call plug#end()
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
+
+"Add plugins to &runtimepath
+call plug#end()
+
+""" end vim-plug
 
 " draw a line at column 80
 set textwidth=80
