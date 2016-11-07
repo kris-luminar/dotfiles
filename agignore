@@ -1,0 +1,17 @@
+/node_modules/
+/log/
+/logs/
+/images/
+/tmp/
+/vendor/
+*.sql
+*.tags*
+*.gemtags*
+*.csv
+*.tsv
+*.tmp*
+*.old
+*.html
+*.plist
+*.pdf
+*.log

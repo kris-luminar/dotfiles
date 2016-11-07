@@ -4,9 +4,6 @@
 PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 # linuxbrew
 PATH="$HOME/.linuxbrew/bin:$PATH"
@@ -153,7 +150,7 @@ alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew d
 
 ################################ END FROM YADR ############################################
 
-alias delete_merged_branches='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias delete_merged_branches="git branch --merged | grep -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 alias branch_moved_to_master='git checkout master && git pull && delete_merged_branches'
 alias edit_last_committed_files='vim `git changes -1 | cut -f2 | sed "1 d"`'
 alias delete_vim_swp_files='find ./ -type f -name "\.*sw[klmnop]" -delete'
