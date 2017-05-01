@@ -180,7 +180,8 @@ let g:indent_guides_start_level = 1
 
 " vim-rspec
 
-let g:rspec_runner = "os_x_iterm2"
+" let g:rspec_runner = "os_x_iterm2"
+let g:rspec_command = "!bundle exec rspec --drb {spec}"
 " map <Leader>w :!bundle exec cucumber --profile wip<CR>
 map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>R :call RunNearestSpec()<CR>
@@ -201,8 +202,8 @@ highlight ColorColumn ctermbg=233 guibg=#2c2d27
 " watches this vimrc file for changes and reloads them into vim automatically
 " copied from http://superuser.com/a/417997/224585
 augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
 if executable('ag')
