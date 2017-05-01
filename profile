@@ -176,7 +176,7 @@ alias be='bundle exec'
 alias migrate='rake db:migrate && rake db:test:load'
 alias reset_migrations='rake db:migrate && git checkout db/schema.rb && rake db:schema:load && rake db:test:load'
 
-alias rrg='rake routes | grep '
+alias rrg='be rake routes | grep '
 
 #When running the Cucumber features, you need to explicitly include the `features/` directory with the `-r` flag.
 alias cuke='time bundle exec cucumber -r features/'
