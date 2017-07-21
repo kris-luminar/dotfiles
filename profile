@@ -11,6 +11,9 @@ PATH="$HOME/.linuxbrew/sbin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
+# VMWare
+PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
+
 export PGDATA=/usr/local/var/postgres
 
 #export FSEVENT_SLEEP="/Users/krisluminar/Downloads/svoop-autotest-fsevent-b143d0a/prebuilt/10.7/fsevent_sleep"
