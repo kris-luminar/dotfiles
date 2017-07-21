@@ -61,6 +61,14 @@ map <silent> ,9 :tabn 9<cr>
 " :command Wq wq
 " :command W w
 " :command Q q
+"
+
+" autocomplete HTML tags with leader c
+" https://stackoverflow.com/questions/130734/how-can-one-close-html-tags-in-vim-quickly
+imap <silent> <C-c> </<C-X><C-O><C-X>
+" this one will put the courser back inside the HTML element
+" imap <silent> <C-c> </<C-X><C-O><C-X> <Esc>F<i
+
 
 """""" NERDtree
 " open NERDtree with Ctrl \ ?
