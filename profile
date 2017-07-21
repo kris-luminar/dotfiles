@@ -186,3 +186,7 @@ alias cuke='time bundle exec cucumber -r features/'
 
 export PATH=$HOME/local/bin:$PATH
 export PATH
+
+# https://github.com/asdf-vm/asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
