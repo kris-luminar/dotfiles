@@ -113,7 +113,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = /Users/krisluminar/.gitignore
+  excludesfile = ~/.gitignore
 [advice]
   statusHints = false
 [diff]
@@ -126,7 +126,8 @@
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
 [include]
-  path = ~/.gitconfig.local
+  # path = ~/.gitconfig.local
+  path = ~/.gitconfig.user
 [difftool "diffmerge"]
   cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
   ; path = 
@@ -137,9 +138,3 @@
   required = true
   clean = git media clean %f
   smudge = git media smudge %f
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
