@@ -102,7 +102,9 @@ nnoremap <silent> ss <C-w>s
 
 " click on a buffer to switch to it. Yes, with the mouse.
 " set mouse+=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 " resize current buffer by +/- 5
 noremap <silent> ,+ :resize +5<cr>
