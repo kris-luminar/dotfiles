@@ -38,12 +38,12 @@
 --ignore-dir=.bundle
 
 # ignore directories
---ignore-dir=vendor tmp log
+--ignore-dir=vendor/ tmp/ log/
 
 --type-add=php=.inc
 
 #make sure ack knows how to search common filetypes used in node.js projects
---ignore-dir=node_modules
+--ignore-dir=node_modules/
 --type-set=coffee=.coffee
 --type-set=jade=.jade
 --type-set=json=.json

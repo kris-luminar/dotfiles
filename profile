@@ -5,12 +5,6 @@ PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/my
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# linuxbrew
-PATH="$HOME/.linuxbrew/bin:$PATH"
-PATH="$HOME/.linuxbrew/sbin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
 
@@ -21,6 +15,9 @@ export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 
 #export JAVA_HOME=$(/usr/libexec/java_home)
+
+# https://stackoverflow.com/questions/29593792/oh-my-zsh-ignore-untracked-files
+export DISABLE_UNTRACKED_FILES_DIRTY=true
 
 alias ls="ls -Gh"
 alias ll="ls -lah"
