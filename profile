@@ -23,7 +23,7 @@ export VISUAL='/usr/bin/vim'
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
 alias ls="ls -Gh"
-alias ll="ls -lh"
+alias ll="ls -lah"
 alias l.="ls -dlh .*"
 alias lf="ls -lh | egrep -v '^d'"
 alias ldir="ls -lh | egrep '^d'"
