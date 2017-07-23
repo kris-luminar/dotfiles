@@ -127,7 +127,7 @@
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.gitconfig.user
 [difftool "diffmerge"]
   cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
   ; path = 
