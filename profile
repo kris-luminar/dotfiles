@@ -5,12 +5,6 @@ PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/my
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# linuxbrew
-PATH="$HOME/.linuxbrew/bin:$PATH"
-PATH="$HOME/.linuxbrew/sbin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
 
