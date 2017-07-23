@@ -1,7 +1,7 @@
 # export CLICOLOR=1;
 # export LSCOLORS=ExFxCxDxBxegedabagacad
 # PS1='\033[0;31m\w \033[0;32m\$ \033[0m'
-PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool
+PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool:$HOME/bin/diff-so-fancy/
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
