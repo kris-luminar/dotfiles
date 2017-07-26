@@ -13,6 +13,10 @@ let mapleader = ","
 " https://github.com/wincent/clipper
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
 
+" copy to system clipboard on yank
+" https://stackoverflow.com/a/10979533/446954
+set clipboard=unnamedplus
+
 " Open new split panes to right and bottom, which feels more natural than Vim’s default
 set splitbelow
 set splitright
