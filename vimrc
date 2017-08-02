@@ -43,6 +43,10 @@ set smartcase
 " When the file has been deleted this is not done.
 set autoread
 
+" added due to indentation issues in HTML markup
+" https://stackoverflow.com/a/5942413/446954
+set autoindent
+
 " restore standard page up/down commands after being hijacked by, I think, gotofile.vim
 " nnoremap <silent> <C-F> <PageDown>
 " nnoremap <silent> <C-B> <PageUp>
