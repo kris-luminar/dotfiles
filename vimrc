@@ -7,15 +7,12 @@ let mapleader = ","
 
 " for vim compiled with the +clipboard all operations such as yy, D, and P work with the clipboard. No need to prefix them with \"* or \"+
 " also see http://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
-" set clipboard=unnamed
-
+if has('macunix')
+  set clipboard=unnamed
+endif
 
 " https://github.com/wincent/clipper
 nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
-
-" copy to system clipboard on yank
-" https://stackoverflow.com/a/10979533/446954
-set clipboard=unnamedplus
 
 " Open new split panes to right and bottom, which feels more natural than Vim’s default
 set splitbelow
@@ -119,7 +116,6 @@ noremap <silent> ,+ :resize +5<cr>
 noremap <silent> ,- :resize -5<cr>
 noremap <silent> ,> :vertical resize +5<cr>
 noremap <silent> ,< :vertical resize -5<cr>
-
 
 " copy filepaths from current buffer to system clipboard
 " relative path  (src/foo.txt)
