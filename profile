@@ -4,6 +4,7 @@
 PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool:$HOME/bin/diff-so-fancy/
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=/usr/local/apache-maven-3.5.0/bin:$PATH
 
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
