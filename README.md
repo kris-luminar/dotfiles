@@ -34,5 +34,5 @@ This creates the symlinks for all files stored in .dotfiles
 Additional Software (Install these before dotfiles on a fresh install)
 ------------------
 
-- [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) as a ZSH framework
+- [Bash It](https://github.com/Bash-it/bash-it) a Bash framework
 - [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) fast file search
