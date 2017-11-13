@@ -9,6 +9,15 @@ export PATH=/usr/local/apache-maven-3.5.0/bin:$PATH
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
 
+# add dropbox bin folder to PATH
+# $PERSONAL_DROPBOX_DIR="$HOME/Dropbox\ \(Personal\)/"
+# # $PERSONAL_DROPBOX_DIR=$HOME/'Dropbox (Personal)/'
+# echo "PERSONAL_DROPBOX_DIR:$PERSONAL_DROPBOX_DIR"
+# $PORTABLE_BIN_DIR="$PERSONAL_DROPBOX_DIRbin"
+# if [[ -d "${PORTABLE_BIN_DIR}" && ! -L "${PORTABLE_BIN_DIR}" ]] ; then
+#   PATH=$PATH:$PORTABLE_BIN_DIR
+# fi
+
 export PGDATA=/usr/local/var/postgres
 
 #export FSEVENT_SLEEP="/Users/krisluminar/Downloads/svoop-autotest-fsevent-b143d0a/prebuilt/10.7/fsevent_sleep"
@@ -119,6 +128,8 @@ alias gbg='git bisect good'
 alias gbb='git bisect bad'
 # git rebase lastest master (grlm)
 alias grlm='git checkout master && git pull && git checkout - && git rebase master'
+alias gfrh='git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
+alias gfp='git fetch && git push --force-with-lease'
 
 # Common shell functions
 alias less='less -r'
