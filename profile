@@ -4,7 +4,7 @@
 PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool:$HOME/bin/diff-so-fancy/
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export PATH=/usr/local/apache-maven-3.5.0/bin:$PATH
+export PATH=/usr/local/apache-maven-3.5.2/bin:$PATH
 
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
@@ -28,6 +28,10 @@ export VISUAL='/usr/bin/vim'
 
 # https://stackoverflow.com/questions/29593792/oh-my-zsh-ignore-untracked-files
 export DISABLE_UNTRACKED_FILES_DIRTY=true
+
+# https://confluence.corp.*??????*.com/display/T2/Building+the+Application
+export JAVA_HOME=`/usr/libexec/java_home -v 9`
+ulimit -n 1024
 
 alias ls="ls -Gh"
 alias ll="ls -lah"
