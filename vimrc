@@ -130,6 +130,12 @@ nnoremap <leader>ct :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 
+" fzf for finding files
+"
+"" If installed using Homebrew
+" see https://github.com/junegunn/fzf
+set rtp+=/usr/local/opt/fzf
+
 "============================== search =============================="
 set hlsearch
 noremap <F4> :set hlsearch! hlsearch?<CR>
