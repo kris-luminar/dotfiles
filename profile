@@ -199,6 +199,13 @@ alias cuke='time bundle exec cucumber -r features/'
 
 alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
 
+## Ubuntu specfic aliases
+if [  -n $(python -mplatform | grep -qi Ubuntu) ]; then
+  # see https://garywoodfine.com/use-pbcopy-on-ubuntu/
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
+
 export PATH=$HOME/local/bin:$PATH
 export PATH
 
