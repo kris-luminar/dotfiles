@@ -30,7 +30,7 @@ export VISUAL='/usr/bin/vim'
 export DISABLE_UNTRACKED_FILES_DIRTY=true
 
 # https://confluence.corp.*??????*.com/display/T2/Building+the+Application
-export JAVA_HOME=`/usr/libexec/java_home -v 9`
+# export JAVA_HOME=`/usr/libexec/java_home -v 9`
 ulimit -n 1024
 
 alias ls="ls -Gh"
@@ -197,7 +197,8 @@ alias rrg='be rake routes | grep '
 #When running the Cucumber features, you need to explicitly include the `features/` directory with the `-r` flag.
 alias cuke='time bundle exec cucumber -r features/'
 
-alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
+## commented out as this raises errors on Ubuntu and I don't remember why I needed it anyway
+# alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
 
 ## Ubuntu specfic aliases
 if [  -n $(python -mplatform | grep -qi Ubuntu) ]; then
