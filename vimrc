@@ -218,6 +218,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
+" see https://github.com/junegunn/fzf.vim
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 "Add plugins to &runtimepath
 call plug#end()
 
