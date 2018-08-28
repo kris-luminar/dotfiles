@@ -173,6 +173,7 @@ alias delete_vim_swp_files='find ./ -type f -name "\.*sw[klmnop]" -delete'
 alias git_sorted_branches="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 alias glist='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ ); do git log --author="Kris Luminar" -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++' | head -18"
 alias git_recently_checked_out_branches="git reflog | egrep -io 'moving from ([^[:space:]]+)' | awk '{ print $3 }' | head -n9"
+alias psql_core="docker exec -it $(docker ps | awk '/postgres/{print $1}') psql -U postgres -S paperstreethouse"
 
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 }
