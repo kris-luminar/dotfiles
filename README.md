@@ -24,7 +24,7 @@ Install [rcm](https://github.com/thoughtbot/rcm):
 Install:
 
     # install the dotfiles
-    rcup -x README.md -x LICENSE
+    rcup -d ~/dotfiles -x README.md -x LICENSE
     # setup vim pathogen
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
