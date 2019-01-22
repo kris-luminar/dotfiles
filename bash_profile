@@ -1,10 +1,10 @@
+source ~/.secrets
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
 # [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
-source ~/.profile
 
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
@@ -56,3 +56,4 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+

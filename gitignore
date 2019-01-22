@@ -1,4 +1,4 @@
-# OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+#OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
 # ----------------------------------------------------------------------------------------------
 .DS_Store
 # Thumbnails
@@ -21,11 +21,12 @@ Desktop.ini
 TAGS
 tags
 
-# Vim       taken from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+# Editors
 # ----------------------------------------------------------------------------------------------
 .*.sw[a-z]
 *.un~
 Session.vim
+.idea
 
 # SASS
 # ----------------------------------------------------------------------------------------------
@@ -36,4 +37,15 @@ Session.vim
 .svn/
 .tool-versions
 
+# JavaScript
+# ----------------------------------------------------------------------------------------------
 node_modules/
+.next
+_next
+
+
+# Stuff that doesn't belong in version control
+# ----------------------------------------------------------------------------------------------
+secrets
+.secrets
+localconfig

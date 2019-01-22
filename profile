@@ -33,6 +33,10 @@ export DISABLE_UNTRACKED_FILES_DIRTY=true
 # export JAVA_HOME=`/usr/libexec/java_home -v 9`
 ulimit -n 1024
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 alias ls="ls -Gh"
 alias ll="ls -lah"
 alias l.="ls -dlh .*"
@@ -203,7 +207,7 @@ alias cuke='time bundle exec cucumber -r features/'
 ## commented out as this raises errors on Ubuntu and I don't remember why I needed it anyway
 # alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
 
-## Ubuntu specfic aliases
+## Ubuntu specific aliases
 if [  -n $(python -mplatform | grep -qi Ubuntu) ]; then
   # see https://garywoodfine.com/use-pbcopy-on-ubuntu/
   alias pbcopy='xclip -selection clipboard'
@@ -216,3 +220,4 @@ export PATH
 # https://github.com/asdf-vm/asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+

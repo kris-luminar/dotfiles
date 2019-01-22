@@ -1,14 +1,7 @@
-source ~/.profile
-source ~/.secrets
-
 # https://direnv.net/
 eval "$(direnv hook bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-+export NVM_DIR="$HOME/.nvm"
-+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Path to the bash it configuration
@@ -64,4 +57,16 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
   # Load Bash It
   source "$BASH_IT"/bash_it.sh
+fi
+
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
+
+if [ -f ~/.localconfig ]; then
+  source ~/.localconfig
+fi
+
+if [ -f ~/.secrets ]; then
+  source ~/.secrets
 fi
