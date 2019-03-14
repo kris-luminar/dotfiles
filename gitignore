@@ -40,8 +40,6 @@ Session.vim
 # JavaScript
 # ----------------------------------------------------------------------------------------------
 node_modules/
-.next
-_next
 
 
 # Stuff that doesn't belong in version control
