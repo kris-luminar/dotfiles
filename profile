@@ -18,6 +18,10 @@ PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
 #   PATH=$PATH:$PORTABLE_BIN_DIR
 # fi
 
+if [[ -d $HOME/Developer ]] ; then
+  PATH=$PATH:$HOME/Developer
+fi
+
 export PGDATA=/usr/local/var/postgres
 
 #export FSEVENT_SLEEP="/Users/krisluminar/Downloads/svoop-autotest-fsevent-b143d0a/prebuilt/10.7/fsevent_sleep"
