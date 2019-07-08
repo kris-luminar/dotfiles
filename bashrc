@@ -3,6 +3,17 @@ eval "$(direnv hook bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+function cdEnhanced() {
+    cd $1;
+    useNvmrc;
+}
+
+function useNvmrc() {
+    if [ -f .nvmrc ]; then
+        nvm use;
+    fi
+}
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Path to the bash it configuration
   export BASH_IT="$HOME/.bash_it"
