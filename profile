@@ -28,7 +28,7 @@ export PGDATA=/usr/local/var/postgres
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 
-#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # https://stackoverflow.com/questions/29593792/oh-my-zsh-ignore-untracked-files
 export DISABLE_UNTRACKED_FILES_DIRTY=true
@@ -40,6 +40,8 @@ ulimit -n 1024
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias cd=cdEnhanced
 
 alias ls="ls -Gh"
 alias ll="ls -lah"
@@ -208,6 +210,8 @@ alias rrg='be rake routes | grep '
 #When running the Cucumber features, you need to explicitly include the `features/` directory with the `-r` flag.
 alias cuke='time bundle exec cucumber -r features/'
 
+
+alias postgresd="pg_ctl -D /usr/local/var/postgres"
 ## commented out as this raises errors on Ubuntu and I don't remember why I needed it anyway
 # alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
 
