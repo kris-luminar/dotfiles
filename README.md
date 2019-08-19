@@ -8,7 +8,7 @@ Install
 
 Clone down this repo
 
-    git clone https://github.com/kris-luminar/dotfiles.git ~/.dotfiles
+    git clone https://github.com/kris-luminar/dotfiles.git ~/dotfiles
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
