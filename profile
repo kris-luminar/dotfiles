@@ -6,6 +6,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/apache-maven-3.5.2/bin:$PATH
 export NEW_RELIC_NO_CONFIG_FILE=true
+export DEFAULT_USER=default2
 
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
