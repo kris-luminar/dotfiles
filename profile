@@ -188,6 +188,8 @@ alias delete_vim_swp_files='find ./ -type f -name "\.*sw[klmnop]" -delete'
 alias git_sorted_branches="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 alias glist='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ ); do git log --author="Kris Luminar" -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++' | head -18"
 alias git_recently_checked_out_branches="git reflog | egrep -io 'moving from ([^[:space:]]+)' | awk '{ print $3 }' | head -n9"
+alias yarnr="find . -type d -name node_modules -prune -exec rm -rf {} \; && yarn"
+alias yarnu="yarn upgrade-interactive --latest"
 
 ## commenting this out since I usually don't have Docker running
 # alias psql_core="docker exec -it $(docker ps | awk '/postgres/{print $1}') psql -U postgres -S paperstreethouse"
@@ -199,6 +201,9 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 # you can add this little gem to your .bash_profile to run a command inside of each directory in the current folder
 # eg: foreachdir 'git status'
 function foreachdir() { /usr/bin/find . -type d -mindepth 1 -maxdepth 1 -exec sh -c "(cd {} && echo '\033[0;31m// '\$PWD'------>\033[0m' && $1)" ';' ; }
+
+# if stderr wil make text red. From https://serverfault.com/a/502019
+color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
 
 alias grep='grep -a --color'
 alias scp='scp -p'
