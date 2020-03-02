@@ -11,6 +11,9 @@ export DEFAULT_USER=default2
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
 
+# Chrome webdriver lives here
+PATH="$HOME/.webdrivers/:$PATH"
+
 # add dropbox bin folder to PATH
 # $PERSONAL_DROPBOX_DIR="$HOME/Dropbox\ \(Personal\)/"
 # # $PERSONAL_DROPBOX_DIR=$HOME/'Dropbox (Personal)/'
