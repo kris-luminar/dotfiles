@@ -99,6 +99,7 @@
   # copied from Matt Metz...
   fzf = !git fetch && branch=$(git branch -r | grep -v HEAD | cut -d '/' -f 2 | fzf -i --query=$1) && git checkout -B $branch origin/$branch && git reset --hard origin/$branch
 
+  patch = !git --no-pager diff --no-color
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [merge]
