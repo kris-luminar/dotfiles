@@ -51,7 +51,7 @@ export PATH="/Users/kluminar/Library/Android/sdk/platform-tools/:$PATH"
 
 # https://confluence.corp.*??????*.com/display/T2/Building+the+Application
 # export JAVA_HOME=`/usr/libexec/java_home -v 9`
-ulimit -n 1024
+# ulimit -n 1024
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
