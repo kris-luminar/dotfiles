@@ -231,6 +231,7 @@ alias rrg='be rake routes | grep '
 #When running the Cucumber features, you need to explicitly include the `features/` directory with the `-r` flag.
 alias cuke='time bundle exec cucumber -r features/'
 
+alias view_latest_android_screenshot='open "e2e/reporting/android/screenshots/$(ls -t e2e/reporting/android/screenshots/ | head -n1)"'
 
 alias postgresd="pg_ctl -D /usr/local/var/postgres"
 ## commented out as this raises errors on Ubuntu and I don't remember why I needed it anyway
