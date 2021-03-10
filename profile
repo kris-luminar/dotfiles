@@ -37,15 +37,20 @@ export PGDATA=/usr/local/var/postgres
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 # https://stackoverflow.com/questions/29593792/oh-my-zsh-ignore-untracked-files
 export DISABLE_UNTRACKED_FILES_DIRTY=true
 
 # https://stackoverflow.com/questions/40248265/how-to-set-android-sdk-root-in-mac/48957460#48957460
-export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_AVD_HOME=~/.android/avd
+
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/Users/kluminar/Library/Android/sdk/platform-tools/:$PATH"
 

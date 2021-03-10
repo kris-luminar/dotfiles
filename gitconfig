@@ -144,3 +144,5 @@
   smudge = git media smudge %f
 [diff-so-fancy]
 	stripLeadingSymbols = false
+[init]
+	defaultBranch = development
