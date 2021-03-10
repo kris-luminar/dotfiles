@@ -237,6 +237,7 @@ alias rrg='be rake routes | grep '
 alias cuke='time bundle exec cucumber -r features/'
 
 alias view_latest_android_screenshot='open "e2e/reporting/android/screenshots/$(ls -t e2e/reporting/android/screenshots/ | head -n1)"'
+alias view_latest_ios='open "e2e/reporting/ios/screenshots/$(ls -t e2e/reporting/ios/screenshots/ | head -n1)"'
 
 alias postgresd="pg_ctl -D /usr/local/var/postgres"
 ## commented out as this raises errors on Ubuntu and I don't remember why I needed it anyway
@@ -255,4 +256,3 @@ export PATH
 # https://github.com/asdf-vm/asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-
