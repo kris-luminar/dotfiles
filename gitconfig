@@ -118,7 +118,7 @@
   autocrlf = false
   editor = vim
   excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	# pager = diff-so-fancy | less --tabs=4 -RFX
 [advice]
   statusHints = false
 [diff]
@@ -142,7 +142,14 @@
   required = true
   clean = git media clean %f
   smudge = git media smudge %f
-[diff-so-fancy]
-	stripLeadingSymbols = false
-[init]
-	defaultBranch = development
+# [diff-so-fancy]
+#	stripLeadingSymbols = false
+[user]
+  email = kris-luminar@users.noreply.github.com
+  name = Kris Luminar
+  signingkey = 34640635BDBF4F1D
+[commit]
+  gpgSign = false
+[pull]
+	ff = only
+	rebase = true

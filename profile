@@ -1,18 +1,14 @@
 # export CLICOLOR=1;
 # export LSCOLORS=ExFxCxDxBxegedabagacad
 # PS1='\033[0;31m\w \033[0;32m\$ \033[0m'
-PATH=$PATH:$HOME/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool:$HOME/bin/diff-so-fancy/
+PATH=$PATH:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:bin:/Applications/VMware\ Fusion.app/Contents/Library/VMware\ OVF\ Tool:$HOME/bin/diff-so-fancy/
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/apache-maven-3.5.2/bin:$PATH
 export NEW_RELIC_NO_CONFIG_FILE=true
-export DEFAULT_USER=default2
 
 # VMWare
 PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
-
-# Chrome webdriver lives here
-PATH="$HOME/.webdrivers/:$PATH"
 
 # add dropbox bin folder to PATH
 # $PERSONAL_DROPBOX_DIR="$HOME/Dropbox\ \(Personal\)/"
@@ -52,7 +48,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH="/Users/kluminar/Library/Android/sdk/platform-tools/:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools/:$PATH"
 
 # https://confluence.corp.*??????*.com/display/T2/Building+the+Application
 # export JAVA_HOME=`/usr/libexec/java_home -v 9`
@@ -207,6 +203,13 @@ alias git_recently_checked_out_branches="git reflog | egrep -io 'moving from ([^
 alias yarnr="find . -type d -name node_modules -prune -exec rm -rf {} \; && yarn"
 alias yarnu="yarn upgrade-interactive --latest"
 
+function watch_my_last_gh_worflow_run () {
+  gh run watch $(gh run list --user 'kris-luminar' --workflow=$1 -L 1 --json 'databaseId' --jq '.[0].databaseId';)
+}
+function view_my_last_gh_worflow_run () {
+  gh run view $(gh run list --user 'kris-luminar' --workflow=$1 -L 1 --json 'databaseId' --jq '.[0].databaseId';) $2;
+}
+
 ## commenting this out since I usually don't have Docker running
 # alias psql_core="docker exec -it $(docker ps | awk '/postgres/{print $1}') psql -U postgres -S paperstreethouse"
 
@@ -218,7 +221,7 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 # eg: foreachdir 'git status'
 function foreachdir() { /usr/bin/find . -type d -mindepth 1 -maxdepth 1 -exec sh -c "(cd {} && echo '\033[0;31m// '\$PWD'------>\033[0m' && $1)" ';' ; }
 
-# if stderr wil make text red. From https://serverfault.com/a/502019
+# if stderr will make text red. From https://serverfault.com/a/502019
 color()(set -o pipefail;"$@" 2>&1>&3|sed $'s,.*,\e[31m&\e[m,'>&2)3>&1
 
 alias grep='grep -a --color'
@@ -244,15 +247,21 @@ alias postgresd="pg_ctl -D /usr/local/var/postgres"
 # alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
 
 ## Ubuntu specific aliases
-if [  -n $(python -mplatform | grep -qi Ubuntu) ]; then
+if [  -n $(python3 -mplatform | grep -qi Ubuntu) ]; then
   # see https://garywoodfine.com/use-pbcopy-on-ubuntu/
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
 export PATH=$HOME/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 export PATH
 
 # https://github.com/asdf-vm/asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -1,6 +1,3 @@
-# https://direnv.net/
-eval "$(direnv hook bash)"
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 function cdEnhanced() {
@@ -29,3 +26,4 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /Users/krisluminar/.config/op/plugins.sh
