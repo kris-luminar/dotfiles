@@ -210,6 +210,7 @@ function view_my_last_gh_worflow_run () {
   gh run view $(gh run list --user 'kris-luminar' --workflow=$1 -L 1 --json 'databaseId' --jq '.[0].databaseId';) $2;
 }
 
+source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 ## commenting this out since I usually don't have Docker running
 # alias psql_core="docker exec -it $(docker ps | awk '/postgres/{print $1}') psql -U postgres -S paperstreethouse"
 
@@ -264,5 +265,6 @@ export PATH
 #  . $HOME/.asdf/asdf.sh
 #. $HOME/.asdf/completions/asdf.bash
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+eval $(/opt/homebrew/bin/brew shellenv)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
