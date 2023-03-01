@@ -58,7 +58,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias cd=cdEnhanced
+# alias cd=cdEnhanced
 
 alias ls="ls -Gh"
 alias ll="ls -lah"
@@ -260,8 +260,9 @@ export PATH=$HOME/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH
 
-# https://github.com/asdf-vm/asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+
+#  . $HOME/.asdf/asdf.sh
+#. $HOME/.asdf/completions/asdf.bash
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
