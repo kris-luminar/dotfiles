@@ -261,10 +261,8 @@ export PATH=$HOME/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH
 
-
-#  . $HOME/.asdf/asdf.sh
-#. $HOME/.asdf/completions/asdf.bash
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 eval $(/opt/homebrew/bin/brew shellenv)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
