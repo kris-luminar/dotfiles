@@ -22,8 +22,8 @@ if [ -f ~/.localconfig ]; then
   source ~/.localconfig
 fi
 
-if [ -f ~/.secrets ]; then
-  source ~/.secrets
+if [ -f ~/.secrets/secrets.sh ]; then
+  source ~/.secrets/secrets.sh
 fi
 
 export NVM_DIR="$HOME/.nvm"

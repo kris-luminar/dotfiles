@@ -1,5 +1,8 @@
 source ~/.profile
-source ~/.secrets
+
+if [ -f ~/.secrets/secrets.sh ]; then
+  source ~/.secrets/secrets.sh
+fi
 
 # now handled by vi-mode oh my zsh plugin
 # use vi/vim bindings in the shell

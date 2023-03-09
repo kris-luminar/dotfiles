@@ -1,4 +1,6 @@
-source ~/.secrets
+if [ -f ~/.secrets/secrets.sh ]; then
+  source ~/.secrets/secrets.sh
+fi
 
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
