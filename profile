@@ -266,5 +266,6 @@ export PATH
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 eval $(/opt/homebrew/bin/brew shellenv)
+export PATH=$(brew --prefix openssl)/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

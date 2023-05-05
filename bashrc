@@ -8,6 +8,12 @@ function cdEnhanced() {
     useNvmrc;
 }
 
+export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
+# CERT_PATH=$(python3 -m certifi)
+# export SSL_CERT_FILE=${CERT_PATH}
+# export REQUESTS_CA_BUNDLE=${CERT_PATH}
+# export REQUESTS_CA_BUNDLE=$HOME/dotfiles/allCAbundle.pem
+
 function useNvmrc() {
     if [ -f .nvmrc ]; then
         nvm use;
