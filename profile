@@ -247,6 +247,8 @@ alias postgresd="pg_ctl -D /usr/local/var/postgres"
 ## commented out as this raises errors on Ubuntu and I don't remember why I needed it anyway
 # alias whatsmyip="ipconfig getifaddr $(route -n get default|awk '/interface/ { print $2 }')"
 
+alias useStage="sed -i '' 's/qa/stage/' $HOME/.secrets/secrets.sh && source ~/.secrets/secrets.sh"
+alias useQA="sed -i '' 's/stage/qa/' $HOME/.secrets/secrets.sh && source ~/.secrets/secrets.sh"
 ## Ubuntu specific aliases
 if [  -n $(python3 -mplatform | grep -qi Ubuntu) ]; then
   # see https://garywoodfine.com/use-pbcopy-on-ubuntu/
